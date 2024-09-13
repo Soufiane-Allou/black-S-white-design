@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK(S)WHITE design</title>
+    <link rel="stylesheet" href="allou.css">
+    <style>
+      
+        body {
+            background-image: url("image1/4444444.jpg");
+            background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
+            background-position: center; /* توسيط الصورة */
+            background-repeat: no-repeat; /* منع تكرار الصورة */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh; /* لضمان أن الأيقونة تكون في الأسفل حتى إذا كانت الصفحة قصيرة */
+        }
+
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .room-item {
+            width: 200px;
+            text-align: center;
+            background-color: #fb8600;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .room-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .price {
+            color: #26ef26;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .discount {
+            color: #FF0000;
+            font-size: 1em;
+            text-decoration: line-through;
+        }
+
+        .btn-green {
+            display: inline-block;
+            background-color: hsl(132, 95%, 62%);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-green:hover {
+            background-color: #49ff29;
+        }
+
+        /* WhatsApp Icon Styles */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 10px; /* المسافة من أسفل الصفحة */
+            left: 10px; /* المسافة من الجانب الأيسر */
+            background-color: #25D366; /* لون خلفية الأيقونة */
+            border-radius: 50%; /* لجعل الخلفية دائرية */
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000; /* جعل الأيقونة في المقدمة */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-icon a {
+            color: white; /* لون الأيقونة */
+            font-size: 36px; /* حجم الأيقونة */
+            text-decoration: none;
+        }
+
+        .whatsapp-icon a:hover {
+            opacity: 0.8; /* تأثير التمرير */
+        }
+
+        .whatsapp-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #25D366; /* لون السهم */
+        }
+
+        /* Service Button Styles */
+        .service-button {
+            background-color: #25D366; /* لون واتساب الأخضر */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none; /* إزالة الخط تحت الرابط */
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- إضافة مكتبة Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- محتوى الصفحة هنا -->
+    <div class="content">
+        <h1>مرحباً بكم في صفحتي</h1>
+        <p>Soufiane-Allou اقدم عدت خدمات من بينها تصميم الشعارات والعلامات التجارية ودراسة جدوى شاملة للمشاريع</p>
+    </div>
+
+    <!-- أيقونة واتساب -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/+212601848594" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="title">black(S)white design</h1>
+        </header>
+        <main>
+            <h1 class="hotel-title" style="text-align: center;">
+                <p style="color: rgb(187, 255, 28);">PNG JPG PDF MP4 تصاميم جاهزة للطباعة لتبدأ مشروعك الخاص بجودة عالية وجميع الصيغات</p>
+                <p style="color: rgb(50, 255, 50);">دراسة جدوى شاملة + تصاميم جاهزة للطباعة + تصميم علامات تجارية</p>
+            </h1>
+            <h2 class="hotel-tagline" style="text-align: center;">
+                <p style="color: rgb(255, 21, 220);">نحن نقدم خدمات تصميم الجرافيك والشعارات الاحترافية</p>
+            </h2>
+
+            <h1 class="hotel-title" style="text-align: center;">30% OFF</h1>
+            <h2 class="hotel-tagline" style="text-align: center;">
+                <p style="color: rgb(187, 255, 28);">PNG JPG PDF MP4 تصاميم جاهزة للطباعة لتبدأ مشروعك الخاص بجودة عالية وجميع الصيغات</p>
+            </h2>
+
+            <div class="icon-container">
+                <!-- Room Items -->
+                <div class="room-item">
+                    <img src="image1/7777 (1).jpg" alt="Room 1" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$5</p>
+                        <p class="discount">$8</p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/7777 (2).jpg" alt="Room 2" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$5</p>
+                        <p class="discount">$8</p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/7777 (3).jpg" alt="Room 3" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$5</p>
+                        <p class="discount">$8</p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/7777 (4).jpg" alt="Room 4" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$5</p>
+                        <p class="discount">$8</p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="hotel-title" style="text-align: center;">30% OFF</h1>
+            <h2 class="hotel-tagline" style="text-align: center;">
+                <p style="color: rgb(50, 255, 50);">خدمات دراسة جدوى شاملة: دراسة شاملة + خطة تشغيلية + خطة عمل </p>
+            </h2>
+
+            <div class="icon-container">
+                <div class="room-item">
+                    <img src="image1/99999 (1).jpg" alt="Room 5" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$10 ابتدأ من</p>
+                        <p class="discount"></p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/99999 (2).jpg" alt="Room 6" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$ابتدأ من 10</p>
+                        <p class="discount"></p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/99999 (3).jpg" alt="Room 7" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$ابتدأ من 10</p>
+                        <p class="discount"></p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="room-item">
+                    <img src="image1/99999.jpg" alt="Room 8" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$ابتدأ من 10</p>
+                        <p class="discount"></p>
+                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <h1 class="hotel-title" style="text-align: center;">30% OFF</h1>
+    <h2 class="hotel-tagline" style="text-align: center;">
+        <p style="color: rgb(255, 21, 220);">تصاميم لعلامات تجارية وشعارات خاصة احترافية بجوده عاليه وثمن مناسب</p>
+    </h2>
+
+    <div class="icon-container">
+        <div class="room-item">
+            <img src="image1/ooo.jpg" alt="Room 5" class="room-image">
+            <div class="room-info">
+                <p class="price">$8</p>
+                <p class="discount"></p>
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+            </div>
+        </div>
+        <div class="room-item">
+            <img src="image1/999 (3).png" alt="Room 6" class="room-image">
+            <div class="room-info">
+                <p class="price">$ابتدأ من 8</p>
+                <p class="discount"></p>
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+            </div>
+        </div>
+        <div class="room-item">
+            <img src="image1/999 (1).png" alt="Room 7" class="room-image">
+            <div class="room-info">
+                <p class="price">$ابتدأ من 8</p>
+                <p class="discount"></p>
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+            </div>
+        </div>
+        <div class="room-item">
+            <img src="image1/999 (2).png" alt="Room 8" class="room-image">
+            <div class="room-info">
+                <p class="price">$ابتدأ من 8</p>
+                <p class="discount"></p>
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة عبر واتساب</a>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+<img src="image1/666666.png" alt="Thumbnail" style="position: absolute; top: 55px; right: 1200px; width: 400px; height: auto;">
+    <script src="allou.js"></script>
+</body>
+</html>
