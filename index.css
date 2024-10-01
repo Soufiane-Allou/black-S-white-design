@@ -12,7 +12,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 h1.title {
@@ -30,20 +30,23 @@ h1.title {
         font-size: 4rem;
     }
 }
-
+.room-image {
+    width: 80%; /* يمكنك تغيير النسبة حسب الحاجة */
+    height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+}
 .room-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .room-item {
-    width: 300px;
+    width: 51px;
     background-color: #507bfc;
-    border-radius: 7px;
+    border-radius: px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgb(39, 87, 127);
+    box-shadow: 0 40px 6px rgb(39, 87, 127);
 }
 
 .room-image {
