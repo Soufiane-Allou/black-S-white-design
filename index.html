@@ -1,193 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACK(S)WHITE design</title>
-    <link rel="stylesheet" href="allou.css">
-    <style>
-        body {
-          background-color: #9b8900;
-            background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
-            background-position: center; /* توسيط الصورة */
-            background-repeat: no-repeat; /* منع تكرار الصورة */
-            margin: 10;
-            padding: 22;
-            position: relative;
-            min-height: 66vh; /* لضمان أن الأيقونة تكون في الأسفل حتى إذا كانت الصفحة قصيرة */
-        }
-
-        .icon-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .room-item {
-            width: 200px;
-            text-align: center;
-            background-color: #000000;
-            border-radius: 30px;
-            padding: 7px;
-            box-shadow: 0 22px 16px rgb(0, 0, 0);
-        }
-
-        .room-image {
-            width: 80%;
-            height: auto;
-        }
-
-        .price {
-            color: #75ff0b;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        .discount {
-            color: #ff0000;
-            font-size: 1.4em;
-            text-decoration: line-through;
-        }
-
-        .btn-green {
-            display: inline-block;
-            background-color: hsl(125, 100%, 50%);
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            padding: 15px 19px;
-            border-radius: 15px;
-            transition: background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-green:hover {
-            background-color: #f6ff00;
-        }
-
-        /* WhatsApp Icon Styles */
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 10px; /* المسافة من أسفل الصفحة */
-            left: 20px; /* المسافة من الجانب الأيسر */
-            background-color: #25D366; /* لون خلفية الأيقونة */
-            border-radius: 50%; /* لجعل الخلفية دائرية */
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            z-index: 100; /* جعل الأيقونة في المقدمة */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .whatsapp-icon a {
-            color: rgb(255, 255, 255); /* لون الأيقونة */
-            font-size: 36px; /* حجم الأيقونة */
-            text-decoration: none;
-        }
-
-        .whatsapp-icon a:hover {
-            opacity: 0.8; /* تأثير التمرير */
-        }
-
-        .whatsapp-icon::before {
-            content: '';
-            position: absolute;
-            top: 47%;
-            left: 98%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 15px solid #b3ff00; /* لون السهم */
-        }
-
-        /* Service Button Styles */
-        .service-button {
-            background-color: #6aff00; /* لون واتساب الأخضر */
-            color: rgb(0, 0, 0);
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none; /* إزالة الخط تحت الرابط */
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        
-       
-            /* التأكيد على بقاء المحتوى فوق الخلفية */
-            .content {
-                position: relative;
-                z-index: 1;
-                text-align: center;
-                color: black;
-            }
-    
-            /* تعديل الألوان لتناسب الخلفية */
-            .social-icons {
-                display: none;
-                position: fixed;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: rgba(0, 0, 0, 0.7); /* خلفية نصف شفافة للأيقونات */
-                padding: 10px;
-                border-radius: 10px 10px 0 0;
-            }
-    
-            .social-icons a {
-                text-decoration: none;
-                color: white;
-                margin: 0 10px;
-                font-size: 24px;
-            }
-    
-            .show {
-                display: flex; /* إظهار الأيقونات بعد الضغط على الزر */
-                justify-content: center;
-            }
-    
-            button {
-                padding: 20px 20px;
-                font-size: 36px;
-                cursor: pointer;
-                background-color: #ff4d00;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                margin-top: 20px;
-            }
-    
-            button:hover {
-                background-color: #0056b3;
-            }
-        </style>
-    </head>
-    <body>
-    
-  
-</head>
-<body>
-  
-  
-  
-    <!-- إضافة مكتبة Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- محتوى الصفحة هنا -->
+    <title>Black(S)White </title>
     <div class="content">
-        <nav class="navbar" style="background-color: #000000; color: rgb(255, 255, 255); display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
-            <div style="font-size: 19px; font-weight: bold;">Black(S)White </div>
+        <nav class="navbar" style="background-color: #000417fe; color: rgb(25, 236, 225); display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+            <div style="font-size: 19px; font-weight: bold;">a_s_soufian </div>
             <div>
-                <a href="index.html" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">الرئيسية</a>
-                <a href="https://paypal.me/soufianallou/1" style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">عن الموقع</a>
+                <a href="mailto:soufianallou4@gmail.com" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">عن الموقع</a>
                 
                 <div class="dropdown" style="position: relative; display: inline-block;">
-                    <a href="style.html" style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px;">الخدمات</a>
+                    <a href="allou.html" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px;">الخدمات</a>
                     <div class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1;">
                         <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 1</a>
                         <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 2</a>
@@ -199,747 +23,402 @@
             </div>
         </nav>
         <style>
-            .navbar a:hover {
-                background-color: #6d8600a8;
-                border-radius: 56px;
-            }
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-        </style>
+            body {
+                background-color: #ffffff;
+                  background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
+                  background-position: center; /* توسيط الصورة */
+                  background-repeat: no-repeat; /* منع تكرار الصورة */
+                  margin: 10;
+                  padding: 22;
+                  position: relative;
+                  min-height: 66vh; /* لضمان أن الأيقونة تكون في الأسفل حتى إذا كانت الصفحة قصيرة */
+              }
 
-    </div>
+        /* الشريط الجانبي */
+        .sidebar {
+            height: 150%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000c16f6;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 21x;
+            z-index: 2;
+        }
 
-    <!-- أيقونة واتساب -->
-    <div class="whatsapp-icon">
-        <a href="https://wa.me/+212601848594" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+        .sidebar a {
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 15px;
+            color: rgb(55, 255, 19);
+            display: block;
+        }
 
-    <div class="container">
-        <header>
-        </header>
-        <main>
-          <div class="title">
-            <span class="black">black</span> <span class="dolar">(S)</span> <span class="white">white </span> <span class=""></span>
-        </div>
-        
-        <style>
-            .title {
-                position: absolute;
-                top: 50px; /* المسافة من أعلى الصفحة */
-                text-align: center;
-                font-size: 36px; /* حجم الخط */
-                width: 100%;
-            }
-            .black {
-                color: rgb(0, 0, 0); /* لون كلمة black */
-            }
-            .dolar {
-                color: rgb(11, 15, 255); /* لون كلمة ($) */
-            }
-            .white {
-                color: rgb(255, 255, 255); /* لون كلمة white */
-            }
-            
+        .sidebar a:hover {
+            background-color: #646f01ab;
+        }
 
-        /* عنوان مضيء */
-        h1 {
-            font-size: 3rem;
-            color: #ffffff;
+        .menu-btn {
+            position: fixed;
+            top: 44px;
+            left: 3px;
+            font-size: 40px;
+            cursor: pointer;
+            color: rgb(239, 255, 238);
+            background: none;
+            border: none;
+            outline: none;
+            z-index: 3;
+        }
+
+        /* الصفحة الرئيسية */
+        .main {
+            transition: margin-left 0.5s;
+            padding: 40px;
+        }
+
+        /* العنوان */
+        .title {
             text-align: center;
-            text-shadow: 0 0 10px rgb(24, 3, 129), 0 0 30px rgba(7, 57, 255, 0.995);
-            margin-bottom: 280px;
-            animation: glow 3s infinite;
+            margin: 32px 0;
         }
 
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 200px rgb(107, 255, 1), 0 0 30px rgb(255, 0, 0) 0 200px rgb(255, 35, 1), 0 0 30px rgb(255, 0, 0);
-            }
-            50% {
-                text-shadow: 0 0 300px rgb(34, 0, 255), 0 0 40px rgba(79, 255, 3, 0.995);
-            }
-            100% {
-                text-shadow: 0 0 200px rgb(58, 3, 255), 0 0 30px rgb(13, 0, 255);
-            }
+        .title span {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0 5px;
         }
-        
-        </style>
-        
-        <p style="color: rgb(222, 197, 3);">.</p>
-      </h2>
-      <p style="color: rgb(222, 197, 3);">.</p>
-    </h2>
-    <p style="color: rgb(222, 197, 3);">.</p>
-<style>
-    #image-container {
-        position: relative;
-        width: 460px; /* يمكنك تعديل هذا لتغيير عرض الحاوية */
-        height: 300px; /* يمكنك تعديل هذا لتغيير ارتفاع الحاوية */
-        overflow: hidden; /* إخفاء أي جزء من الصورة يتجاوز الحاوية */
-        margin: 20px auto; /* محاذاة الحاوية في الوسط */
-    }
 
-    .slideshow {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; /* عرض الصورة بالكامل */
-        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-        display: none; /* إخفاء جميع الصور في البداية */
-    }
+        .title .black { color: rgb(0, 0, 0); }
+        .title .white { color: rgb(255, 255, 255); }
+        .title .design { color: rgb(255, 153, 0); }
 
-    .slideshow.active {
-        display: block; /* عرض الصورة النشطة فقط */
-    }
-</style>
+        /* معرض الصور تحت العنوان */
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            margin: 110px 0;
+        }
+
+        .slideshow-container img {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* الأيقونات في وسط الصفحة */
+
+        .social-icons {
+            position: fixed;
+            bottom:5px;
+            right: 5px;
+            display: flex;
+            gap: 5px; /* إضافة فراغات بين الأيقونات */
+        }
+
+        .social-icons a {
+            margin: 0;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* إضافة تأثيرات عند التمرير */
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 22%;
+            filter: grayscale(100%); /* تحويل الأيقونات إلى الأبيض والأسود */
+        }
+
+        /* التأثير الاحترافي عند التمرير */
+        .social-icons a:hover img {
+            transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+            filter: none; /* إزالة تأثير الأبيض والأسود */
+            box-shadow: 0 4px 15px rgba(112, 255, 9, 0.2); /* إضافة ظل حول الأيقونة */
+        }
+
+        /* عند التمرير فوق الرابط (حول الأيقونة) */
+        .social-icons a:hover {
+            transform: translateY(10px); /* تحريك الأيقونة لأعلى */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            margin: 90px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            background: linear-gradient(145deg, #6e6e6e, #4d4d4d);
+            box-shadow: 6px 6px 12px #3c3c3c, -6px -6px 12px #8c8c8c;
+        }
+        .icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        .icon1 {
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            box-shadow: 6px 6px 12px #b03a2e, -6px -6px 12px #ff6655;
+        }
+        .icon2 {
+            background: linear-gradient(145deg, #3498db, #2980b9);
+            box-shadow: 6px 6px 12px #2874a6, -6px -6px 12px #5dade2;
+        }
+        .icon3 {
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            box-shadow: 6px 6px 12px #229954, -6px -6px 12px #58d68d;
+        }
+        .bottom-left-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #f39c12, #e67e22);
+            box-shadow: 6px 6px 12px #d35400, -6px -6px 12px #f5b041;
+        }
+    </style>
+    
 </head>
 <body>
 
-<div id="image-container">
-<img src="image1/BLACK11 (1).png" alt="Image 1" class="slideshow active">
-<img src="image1/black1.png"Image 2" class="slideshow">
-<img src="image1/BLACK11 (2).png" alt="Image 3" class="slideshow">
-</div>
+    <!-- زر القائمة -->
+    <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
 
-<script>
-let currentIndex = 0;
-const images = document.querySelectorAll('.slideshow');
-
-function showNextImage() {
-    images[currentIndex].classList.remove('active'); // إخفاء الصورة الحالية
-    currentIndex = (currentIndex + 1) % images.length; // الانتقال إلى الصورة التالية
-    images[currentIndex].classList.add('active'); // عرض الصورة الجديدة
-}
-
-// تغيير الصورة كل 3 ثواني (3000 مللي ثانية)
-setInterval(showNextImage, 3000);
-</script>
-
-            <h2 class="hotel-tagline" style="text-align: center;">
-                <p style="color: rgb(0, 0, 0);">PNG JPG PDF MP4تصاميم جاهزة للطباعة بجودة عالية </p>
-            </h2>
-
-            <div class="icon-container">
-                <!-- Room Items -->
-                <div class="room-item">
-                    <img src="image1/999998 (1).png" alt="Room 1" class="room-image">
-                    <div class="room-info">
-                        <p class="price">$5</p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: rgb(225, 255, 0); /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/999998 (2).png" alt="Room 2" class="room-image">
-                    <div class="room-info">
-                        <p class="price">$5</p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/999998 (3).png" alt="Room 3" class="room-image">
-                    <div class="room-info">
-                        <p class="price">$5</p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/999998.png" alt="Room 4" class="room-image">
-                    <div class="room-info">
-                        <p class="price">$5</p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-            </div>
-            <h2 class="hotel-tagline" style="text-align: center;">
-                <p style="color: rgb(0, 0, 0);"> خدمات دراسة جدوى شاملة: دراسة شاملة + خطة تشغيلية + خطة عمل </p>
-            </h2>
-
-            <div class="icon-container">
-                <div class="room-item">
-                    <img src="image1/feasblty (4).png" alt="Room 5" class="room-image">
-                    <div class="room-info">
-                        <p class="price"> $10 ابتدأ من</p>
-                        <p class="discount"></p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/feasblty (1).png" alt="Room 6" class="room-image">
-                    <div class="room-info">
-                        <p class="price"> $ابتدأ من 10</p>
-                        <p class="discount"></p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/feasblty (2).png" alt="Room 7" class="room-image">
-                    <div class="room-info">
-                        <p class="price"> $ابتدأ من 10</p>
-                        <p class="discount"></p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-                <div class="room-item">
-                    <img src="image1/feasblty (3).png" alt="Room 8" class="room-image">
-                    <div class="room-info">
-                        <p class="price"> $ابتدأ من 10</p>
-                        <p class="discount"></p>
-                        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-                    </div>
-                    <div class="star-rating">
-                        <div class="rating-full">
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★</span>
-                            <span class="star checked">★½</span> <!-- نصف نجمة -->
-                            <span class="star">★</span>
-                        </div>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    
-                    <style>
-                        .star-rating {
-                            position: relative;
-                            display: inline-block;
-                            font-size: 24px; /* حجم النجوم */
-                        }
-                    
-                        .star {
-                            color: lightgray; /* لون النجوم الفارغة */
-                        }
-                    
-                        .star.checked {
-                            color: gold; /* لون النجوم المملوءة */
-                        }
-                    
-                        .rating-full {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            white-space: nowrap; /* يجعل النجوم في صف واحد */
-                            overflow: hidden; /* يخفي النجوم الزائدة */
-                            width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                        }
-                    </style>
-                </div>
-            </div>
-        </main>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar" id="sidebar">
+        <a href=>.</a>
+        <a href="allou.html" style="color: rgb(36, 255, 80); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">الخدمات </a>
+        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9"  style="color: rgb(117, 255, 18); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">اتصل بنا </a>
+        <a href="mailto:soufianallou4@gmail.com">soufiane-allou</a>
+        <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" style="color: rgb(21, 228, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">Black(S)White Design</a>
+       
     </div>
-    <h2 class="hotel-tagline" style="text-align: center;">
-        <p style="color: rgb(0, 0, 0);">تصاميم لعلامات تجارية وشعارات خاصة باحترافية وجوده عاليه </p>
-    </h2>
 
-    <div class="icon-container">
-        <div class="room-item">
-            <img src="image1/ooo.jpg" alt="Room 5" class="room-image">
-            <div class="room-info">
-                <p class="price">$ ابتدأ من 8</p>
-                <p class="discount"></p>
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-            </div>
-            <div class="star-rating">
-                <div class="rating-full">
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★½</span> <!-- نصف نجمة -->
-                    <span class="star">★</span>
-                </div>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-            </div>
-            
-            <style>
-                .star-rating {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 24px; /* حجم النجوم */
-                }
-            
-                .star {
-                    color: lightgray; /* لون النجوم الفارغة */
-                }
-            
-                .star.checked {
-                    color: gold; /* لون النجوم المملوءة */
-                }
-            
-                .rating-full {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    white-space: nowrap; /* يجعل النجوم في صف واحد */
-                    overflow: hidden; /* يخفي النجوم الزائدة */
-                    width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                }
-            </style>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main">
+        <!-- العنوان -->
+     
+        <div class="title">
+            <span class="black">Black</span>
+            <span class="white">White</span>
+            <span class="design">Design</span>
         </div>
-        <div class="room-item">
-            <img src="image1/999 (3).png" alt="Room 6" class="room-image">
-            <div class="room-info">
-                <p class="price">$ ابتدأ من 8</p>
-                <p class="discount"></p>
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-            </div>
-            <div class="star-rating">
-                <div class="rating-full">
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★½</span> <!-- نصف نجمة -->
-                    <span class="star">★</span>
-                </div>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-            </div>
-            
-            <style>
-                .star-rating {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 24px; /* حجم النجوم */
-                }
-            
-                .star {
-                    color: lightgray; /* لون النجوم الفارغة */
-                }
-            
-                .star.checked {
-                    color: gold; /* لون النجوم المملوءة */
-                }
-            
-                .rating-full {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    white-space: nowrap; /* يجعل النجوم في صف واحد */
-                    overflow: hidden; /* يخفي النجوم الزائدة */
-                    width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                }
-            </style>
-        </div>
-        <div class="room-item">
-            <img src="image1/999 (1).png" alt="Room 7" class="room-image">
-            <div class="room-info">
-                <p class="price">$ ابتدأ من 8</p>
-                <p class="discount"></p>
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-            </div>
-            <div class="star-rating">
-                <div class="rating-full">
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★½</span> <!-- نصف نجمة -->
-                    <span class="star">★</span>
-                </div>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-            </div>
-            
-            <style>
-                .star-rating {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 24px; /* حجم النجوم */
-                }
-            
-                .star {
-                    color: lightgray; /* لون النجوم الفارغة */
-                }
-            
-                .star.checked {
-                    color: gold; /* لون النجوم المملوءة */
-                }
-            
-                .rating-full {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    white-space: nowrap; /* يجعل النجوم في صف واحد */
-                    overflow: hidden; /* يخفي النجوم الزائدة */
-                    width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                }
-            </style>
-        </div>
-        <div class="room-item">
-            <img src="image1/999 (2).png" alt="Room 8" class="room-image">
-            <div class="room-info">
-                <p class="price">$ ابتدأ من 8</p>
-                <p class="discount"></p>
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" class="service-button">طلب الخدمة  </a>
-            </div>
-            <div class="star-rating">
-                <div class="rating-full">
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★</span>
-                    <span class="star checked">★½</span> <!-- نصف نجمة -->
-                    <span class="star">★</span>
-                </div>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-            </div>
-            
-            <style>
-                .star-rating {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 24px; /* حجم النجوم */
-                }
-            
-                .star {
-                    color: lightgray; /* لون النجوم الفارغة */
-                }
-            
-                .star.checked {
-                    color: gold; /* لون النجوم المملوءة */
-                }
-            
-                .rating-full {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    white-space: nowrap; /* يجعل النجوم في صف واحد */
-                    overflow: hidden; /* يخفي النجوم الزائدة */
-                    width: 70%; /* عرض النجوم المملوءة (3.5 نجوم) */
-                }
-            </style>
+
+
+        <!-- الأيقونات في وسط الصفحة -->
+        <div class="icon-container">
+            <!-- ضع رابط الصور لكل أيقونة هنا -->
+
+
+        <!-- أيقونات التواصل الاجتماعي -->
+        <div class="social-icons">
+            <!-- ضع رابط الصور لكل أيقونة تواصل اجتماعي هنا -->
+            <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank"><img src="image1/fqcceb.jpg" alt="Facebook"></a>
+            <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9"> <img src="image1/zhqtsqp.jpg"></a>
+            <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank"><img src="image1/instrgrq,.jpg" alt="Instagram"></a>
+            <a href="soufianallou4@gmail.com"><img src="image1/imail.jpg" alt="Gmail"></a>
         </div>
     </div>
-</main>
-</div>
-<div class="icon">
-  <b></b>
-  <div class="content">
-       <p style="color: rgb(0, 0, 0);">                    للمزيد من المعلومات        <br><span>  </span></p>
-      <li>
-        <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank">
-          <svg class="fa-brands fa-facebook" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            /* استخدام تدرج لوني بألوان فاتحة ومتناسقة */
+            background: linear-gradient(45deg, #73ea3d, #6200bd, #0df9e9, #ffa200); /* يمكنك تعديل الألوان هنا */
+            background-size: 400% 400%; /* التحكم بحجم التدرج */
+            animation: gradientAnimation 15s ease infinite; /* جعل الخلفية تتحرك بشكل سلس */
+        }
+
+        /* إضافة حركة لتدرج الألوان */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 90% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            color: #0d9aff;
+            margin: 20px 0;
+        }
+        .slider {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            color: rgb(43, 0, 53);
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            background: linear-gradient(145deg, #6a07ff3a, #9b13cd4d);
+            box-shadow: 6px 6px 12px #af37ff44, -6px -6px 12px #67009b57;
+        }
+        .icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        .icon1 {
+            background: linear-gradient(145deg, #87960148, #00d9ff49);
+            box-shadow: 6px 6px 12px #1eff0043, -6px -6px 12px #9499004b;
+        }
+        .icon2 {
+            background: linear-gradient(145deg, #3498db3d, #297fb952);
+            box-shadow: 6px 6px 12px #2874a64b, -6px -6px 12px #5dade256;
+        }
+        .icon3 {
+            background: linear-gradient(145deg, #21a30048, #00ff6a46);
+            box-shadow: 6px 6px 12px #b5c80850, -6px -6px 12px #009c413b;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    
+        .icon-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+    
+        .icon {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 7px solid #46ff3c; /* حواف لتمييز الأيقونات */
+        }
+    
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* يجعل الصورة تغطي كامل الأيقونة */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- معرض الصور المتغيرة -->
+    <div class="slider">
+        <img src="image1/BLACKK1.png" class="active" alt="صورة 1">
+        <img src="image1/BLACK2.png" alt="صورة 2">
+        <img src="image1/BLACK3.png" صورة 3">
+    </div>
+
+    <!-- الأيقونات في الوسط -->
+    <div class="container">
+        <div class="icon-row">
+            <div class="icon icon1">
+                <a href="style.html">
+                    <img src="image1/zikon (2).png" alt="Icon 1">
+                </a>
+                .
+            </div>
+            <div class="icon icon2">
+                <a href="black.html">
+                    <img src="image1/ggggggp.png" alt="Icon 2">
+                </a>
+                .
+            </div>
+        </div>
+        <div class="icon-row">
+            <div class="icon icon3">
+                <a href="allou.html">
+                    <img src="image1/SERVES.png" alt="Icon 3">
+                </a>
+                .
+            </div>
+        </div>
+    </div>
+    
+    <!-- الأيقونة الجديدة في أسفل اليسار -->
+    <div class="icon bottom-left-icon">
+        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">
+            <img src="image1/zikon (3).png" alt="Icon 4">
         </a>
-      </li>
+        .
+    </div>
+    
 
-      <li>
-        <a href="https://www.twitter.com" target="_blank">
-          <svg class="fa-brands fa-twitter" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-        </a>
-      </li>
+    <script>
+        // كود لتغيير الصور تلقائيًا
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider img');
+        setInterval(() => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, 3000); // تغيير الصورة كل 3 ثواني
+    </script>
 
-      <li>
-        <a href="https://www.linkedin.com" target="_blank">
-          <svg class="fa-brands fa-linkedin-in" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank">
-          <svg class="fa-brands fa-instagram" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="content">
-    <footer></footer>
-        <a href="style.html" class="btn-green">خدمات اخرى </a>
-    </footer>
-<ul class="sci">
-
-
-
-    <script src="index.java"></script>
+    <script>
+        // وظيفة لإظهار وإخفاء الشريط الجانبي
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "200px";
+            } else {
+                sidebar.style.width = "0";
+            }
+        }
+    </script>
 </body>
 </html>
