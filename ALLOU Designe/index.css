@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: black;
+    display: flex;
+}
+
+.title span {
+    margin-right: 5px;
+}
+
+.image-slider {
+    display: flex;
+    overflow: hidden;
+    height: 200px;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.icon {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 100%;
+    height: 100px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: right;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* تأثيرات ثلاثية الأبعاد */
+.icon1, .icon2, .icon3 {
+    background: linear-gradient(145deg, #6e6e6e, #4d4d4d);
+    box-shadow: 6px 6px 12px #3c3c3c, -6px -6px 12px #8c8c8c;
+}
+
+/* تأثيرات حركية */
+.icon:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.icon1 {
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    box-shadow: 6px 6px 12px #b03a2e, -6px -6px 12px #ff6655;
+}
+
+.icon2 {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    box-shadow: 6px 6px 12px #2874a6, -6px -6px 12px #5dade2;
+}
+
+.icon3 {
+    background: linear-gradient(145deg, #2ecc71, #27ae60);
+    box-shadow: 6px 6px 12px #229954, -6px -6px 12px #58d68d;
+}

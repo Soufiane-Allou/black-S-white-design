@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK(S)WHITE design</title>
+    <link rel="stylesheet" href="allou.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #03ffff, #6200bd, #d90df9, #ff8820); /* يمكنك تعديل الألوان هنا */
+            background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
+            background-position: center; /* توسيط الصورة */
+            background-repeat: no-repeat; /* منع تكرار الصورة */
+            margin: 10;
+            padding: 22;
+            position: relative;
+            min-height: 66vh; /* لضمان أن الأيقونة تكون في الأسفل حتى إذا كانت الصفحة قصيرة */
+        }
+
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .room-item {
+            width: 200px;
+            text-align: center;
+            background-color: #000000;
+            border-radius: 30px;
+            padding: 7px;
+            box-shadow: 0 22px 16px rgb(0, 0, 0);
+        }
+
+        .room-image {
+            width: 80%;
+            height: auto;
+        }
+
+        .price {
+            color: #75ff0b;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .discount {
+            color: #ff0000;
+            font-size: 1.4em;
+            text-decoration: line-through;
+        }
+
+        .btn-green {
+            display: inline-block;
+            background-color: hsl(125, 100%, 50%);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px 19px;
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-green:hover {
+            background-color: #f6ff00;
+        }
+
+        /* WhatsApp Icon Styles */
+    
+
+      
+
+        /* Service Button Styles */
+        .service-button {
+            background-color: #6aff00; /* لون واتساب الأخضر */
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none; /* إزالة الخط تحت الرابط */
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+       
+            /* التأكيد على بقاء المحتوى فوق الخلفية */
+            .content {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                color: black;
+            }
+    
+            /* تعديل الألوان لتناسب الخلفية */
+            .social-icons {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.7); /* خلفية نصف شفافة للأيقونات */
+                padding: 10px;
+                border-radius: 10px 10px 0 0;
+            }
+    
+            .social-icons a {
+                text-decoration: none;
+                color: white;
+                margin: 0 10px;
+                font-size: 24px;
+            }
+    
+            .show {
+                display: flex; /* إظهار الأيقونات بعد الضغط على الزر */
+                justify-content: center;
+            }
+    
+            button {
+                padding: 20px 20px;
+                font-size: 36px;
+                cursor: pointer;
+                background-color: #ff4d00;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+    
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+    
+  
+</head>
+<body>
+  
+  
+  
+    <!-- إضافة مكتبة Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- محتوى الصفحة هنا -->
+    <div class="content">
+        <nav class="navbar" style="background-color: #000417fe; color: rgb(25, 236, 225); display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+            <div style="font-size: 19px; font-weight: bold;">a_s_soufian </div>
+            <div>
+                <a href="index.html" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">الرئيسية</a>
+                <a href="https://wa.me/+212601848594"  style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">عن الموقع</a>
+                
+                <div class="dropdown" style="position: relative; display: inline-block;">
+                    <a href="allou.html" style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px;">الخدمات</a>
+                    <div class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1;">
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 1</a>
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 2</a>
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 3</a>
+                    </div>
+                </div>
+        
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px;">اتصل بنا</a>
+            </div>
+        <style>
+            .navbar a:hover {
+                background-color: #6d8600a8;
+                border-radius: 56px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+
+    </div>
+
+    <!-- أيقونة واتساب -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/+212601848594" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <header>
+        </header>
+        <main>
+          <div class="title">
+            <span class="black">black</span> <span class="dolar">(S)</span> <span class="white">white </span> <span class=""></span>
+        </div>
+        
+        <style>
+            .title {
+                position: absolute;
+                top: 50px; /* المسافة من أعلى الصفحة */
+                text-align: center;
+                font-size: 36px; /* حجم الخط */
+                width: 100%;
+            }
+            .black {
+                color: rgb(0, 0, 0); /* لون كلمة black */
+            }
+            .dolar {
+                color: rgb(11, 15, 255); /* لون كلمة ($) */
+            }
+            .white {
+                color: rgb(255, 255, 255); /* لون كلمة white */
+            }
+            
+
+        /* عنوان مضيء */
+        h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0 0 10px rgb(24, 3, 129), 0 0 30px rgba(7, 57, 255, 0.995);
+            margin-bottom: 280px;
+            animation: glow 3s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 200px rgb(107, 255, 1), 0 0 30px rgb(255, 0, 0) 0 200px rgb(255, 35, 1), 0 0 30px rgb(255, 0, 0);
+            }
+            50% {
+                text-shadow: 0 0 300px rgb(34, 0, 255), 0 0 40px rgba(79, 255, 3, 0.995);
+            }
+            100% {
+                text-shadow: 0 0 200px rgb(58, 3, 255), 0 0 30px rgb(13, 0, 255);
+            }
+        }
+        
+        </style>
+        
+        <p style="color: rgb(222, 197, 3);">.</p>
+      </h2>
+      <p style="color: rgb(222, 197, 3);">.</p>
+    </h2>
+    <p style="color: rgb(222, 197, 3);">.</p>
+<style>
+    #image-container {
+        position: relative;
+        width: 460px; /* يمكنك تعديل هذا لتغيير عرض الحاوية */
+        height: 300px; /* يمكنك تعديل هذا لتغيير ارتفاع الحاوية */
+        overflow: hidden; /* إخفاء أي جزء من الصورة يتجاوز الحاوية */
+        margin: 20px auto; /* محاذاة الحاوية في الوسط */
+    }
+
+    .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* عرض الصورة بالكامل */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        display: none; /* إخفاء جميع الصور في البداية */
+    }
+
+    .slideshow.active {
+        display: block; /* عرض الصورة النشطة فقط */
+    }
+</style>
+</head>
+<body>
+
+    <div id="image-container">
+        <img src="image1/BLACKK1.png" alt="Image 1" class="slideshow active">
+        <img src="image1/BLACK2.png" class="slideshow">
+        <img src="image1/BLACK3.png" alt="Image 3" class="slideshow">
+        </div>
+
+<script>
+let currentIndex = 0;
+const images = document.querySelectorAll('.slideshow');
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active'); // إخفاء الصورة الحالية
+    currentIndex = (currentIndex + 1) % images.length; // الانتقال إلى الصورة التالية
+    images[currentIndex].classList.add('active'); // عرض الصورة الجديدة
+}
+
+// تغيير الصورة كل 3 ثواني (3000 مللي ثانية)
+setInterval(showNextImage, 3000);
+</script>
+
+            <h2 class="hotel-tagline" style="text-align: center;">
+                <p style="color: rgb(0, 0, 0);">PNG JPG PDF MP4تصاميم جاهزة للطباعة بجودة عالية </p>
+            </h2>
+
+            <div class="icon-container">
+                <!-- Room Items -->
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }
+                
+                    .room-item {
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        padding: 15px;
+                        margin: 10px;
+                        text-align: center;
+                        width: 250px; /* عرض العنصر */
+                        display: inline-block; /* عرض العنصر في صفوف */
+                        vertical-align: top; /* محاذاة العناصر الرأسية */
+                    }
+                
+                    .room-image {
+                        width: 100%; /* عرض الصورة */
+                        height: auto; /* ارتفاع الصورة تلقائي */
+                        border-radius: 5px; /* زوايا دائرية للصورة */
+                    }
+                
+                    .price {
+                        font-size: 20px;
+                        color: #5fff0f;
+                        margin: 10px 0; /* مساحة فوق وتحت السعر */
+                    }
+                
+                    .buy-button {
+                        background-color: #007BFF; /* لون الزر */
+                        color: white; /* لون النص */
+                        padding: 10px 15px; /* مساحة داخلية */
+                        border: none; /* إزالة الحدود */
+                        border-radius: 5px; /* زوايا دائرية */
+                        font-size: 16px; /* حجم الخط */
+                        cursor: pointer; /* يجعل الزر قابل للنقر */
+                        transition: background-color 0.3s; /* تأثير الانتقال عند التمرير */
+                    }
+                
+                    .buy-button:hover {
+                        background-color: #0056b3; /* لون الخلفية عند التمرير */
+                    }
+                
+                    .star-rating {
+                        display: flex;
+                        justify-content: center; /* محاذاة النجوم في الوسط */
+                        margin: 10px 0; /* مساحة فوق وتحت النجوم */
+                    }
+                
+                    .star {
+                        font-size: 24px; /* حجم النجوم */
+                        color: lightgray; /* لون النجوم الفارغة */
+                        cursor: pointer; /* يظهر كأنه قابل للنقر */
+                        transition: color 0.3s; /* تأثير الانتقال عند النقر */
+                    }
+                
+                    .star.checked {
+                        color: gold; /* لون النجوم المملوءة */
+                    }
+                    
+    .icon-container {
+        display: flex;
+        justify-content: space-around; /* توزيع العناصر بالتساوي */
+        flex-wrap: wrap; /* السماح للعناصر بالانتقال إلى السطر التالي عند الحاجة */
+        padding: 10px;
+    }
+
+    .icon-item {
+        flex: 0 1 calc(25% - 20px); /* 4 عناصر في الصف */
+        margin: 10px;
+        text-align: center;
+    }
+
+    .icon-image {
+        max-width: 100%; /* تأكد من أن الصورة لا تتجاوز العرض المحدد */
+        height: auto; /* الحفاظ على نسبة الأبعاد */
+        border-radius: 5px; /* زوايا دائرية */
+    }
+
+    /* تخصيص لزيادة التوافق مع شاشات الهواتف */
+    @media (max-width: 768px) {
+        .icon-item {
+            flex: 0 1 calc(50% - 20px); /* 2 عناصر في الصف */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .icon-item {
+            flex: 0 1 100%; /* عنصر واحد في الصف */
+        }
+    }
+</style>
+                
+                <div class="room-item"> 
+                    <img src="image1/ooo.jpg"alt="logo 1" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 1">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                </div>
+                
+                <div class="room-item"> 
+                    <img src="image1/logo.png" alt="logo 2" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 1">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                </div>
+                
+                <div class="room-item">
+                    <img src="image1/logo2.png" alt="logo 3" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 2">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                
+                </div>
+                <div class="room-item">
+                    <img src="image1/999 (2).png" alt="logo 4" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 2">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                
+                </div> <div class="room-item"> 
+                    <img src="image1/LOGO1.png"logo 5" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 1">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                </div>
+                
+                <div class="room-item"> 
+                    <img src="image1/logo33.png" alt="logo 6" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 1">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                </div>
+                
+                <div class="room-item">
+                    <img src="image1/logo4.png" alt="logo 7" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 2">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                
+                </div>
+                <div class="room-item">
+                    <img src="image1/999 (1).png" alt="logo 8" class="room-image">
+                    <div class="room-info">
+                        <p class="price">$8</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                            <input type="hidden" name="item_name" value="Room 2">
+                            <input type="hidden" name="amount" value="8">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
+                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="submit" value="اشترِ الآن" class="buy-button">
+                        </form>
+                        
+                        <div class="star-rating">
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star checked">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <div class="star-rating user-rating">
+                         
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </div>
+</main>
+        </div>
+    </div>
+</main>
+</div>
+<div class="icon">
+  <b></b>
+  <div class="content">
+       <p style="color: rgb(0, 0, 0);">                    للمزيد من المعلومات        <br><span>  </span></p>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank">
+          <svg class="fa-brands fa-facebook" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.twitter.com" target="_blank">
+          <svg class="fa-brands fa-twitter" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com" target="_blank">
+          <svg class="fa-brands fa-linkedin-in" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank">
+          <svg class="fa-brands fa-instagram" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+    <script src="index.java"></script>
+</body>
+</html>

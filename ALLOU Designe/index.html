@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black(S)White </title>
+    <div class="content">
+        <nav class="navbar" style="background-color: #000417fe; color: rgb(25, 236, 225); display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+            <div style="font-size: 19px; font-weight: bold;">a_s_soufian </div>
+            <div>
+                <a href="mailto:soufianallou4@gmail.com" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">عن الموقع</a>
+                
+                <div class="dropdown" style="position: relative; display: inline-block;">
+                    <a href="allou.html" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px;">الخدمات</a>
+                    <div class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1;">
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 1</a>
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 2</a>
+                        <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">خدمة 3</a>
+                    </div>
+                </div>
+        
+                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" style="color: rgb(0, 255, 17); text-decoration: none; padding: 10px 15px;">اتصل بنا</a>
+            </div>
+        </nav>
+        <style>
+            body {
+                background-color: #ffffff;
+                  background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
+                  background-position: center; /* توسيط الصورة */
+                  background-repeat: no-repeat; /* منع تكرار الصورة */
+                  margin: 10;
+                  padding: 22;
+                  position: relative;
+                  min-height: 66vh; /* لضمان أن الأيقونة تكون في الأسفل حتى إذا كانت الصفحة قصيرة */
+              }
+
+        /* الشريط الجانبي */
+        .sidebar {
+            height: 150%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000c16f6;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 21x;
+            z-index: 2;
+        }
+
+        .sidebar a {
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 15px;
+            color: rgb(55, 255, 19);
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #646f01ab;
+        }
+
+        .menu-btn {
+            position: fixed;
+            top: 44px;
+            left: 3px;
+            font-size: 40px;
+            cursor: pointer;
+            color: rgb(239, 255, 238);
+            background: none;
+            border: none;
+            outline: none;
+            z-index: 3;
+        }
+
+        /* الصفحة الرئيسية */
+        .main {
+            transition: margin-left 0.5s;
+            padding: 40px;
+        }
+
+        /* العنوان */
+        .title {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .title span {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        .title .black { color: rgb(0, 0, 0); }
+        .title .white { color: rgb(255, 255, 255); }
+        .title .design { color: rgb(255, 153, 0); }
+
+        /* معرض الصور تحت العنوان */
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            margin: 110px 0;
+        }
+
+        .slideshow-container img {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* الأيقونات في وسط الصفحة */
+
+        .social-icons {
+            position: fixed;
+            bottom:5px;
+            right: 5px;
+            display: flex;
+            gap: 5px; /* إضافة فراغات بين الأيقونات */
+        }
+
+        .social-icons a {
+            margin: 0;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* إضافة تأثيرات عند التمرير */
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 22%;
+            filter: grayscale(100%); /* تحويل الأيقونات إلى الأبيض والأسود */
+        }
+
+        /* التأثير الاحترافي عند التمرير */
+        .social-icons a:hover img {
+            transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+            filter: none; /* إزالة تأثير الأبيض والأسود */
+            box-shadow: 0 4px 15px rgba(112, 255, 9, 0.2); /* إضافة ظل حول الأيقونة */
+        }
+
+        /* عند التمرير فوق الرابط (حول الأيقونة) */
+        .social-icons a:hover {
+            transform: translateY(10px); /* تحريك الأيقونة لأعلى */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            margin: 90px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            background: linear-gradient(145deg, #6e6e6e, #4d4d4d);
+            box-shadow: 6px 6px 12px #3c3c3c, -6px -6px 12px #8c8c8c;
+        }
+        .icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        .icon1 {
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            box-shadow: 6px 6px 12px #b03a2e, -6px -6px 12px #ff6655;
+        }
+        .icon2 {
+            background: linear-gradient(145deg, #3498db, #2980b9);
+            box-shadow: 6px 6px 12px #2874a6, -6px -6px 12px #5dade2;
+        }
+        .icon3 {
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            box-shadow: 6px 6px 12px #229954, -6px -6px 12px #58d68d;
+        }
+        .bottom-left-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #f39c12, #e67e22);
+            box-shadow: 6px 6px 12px #d35400, -6px -6px 12px #f5b041;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- زر القائمة -->
+    <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+    <!-- الشريط الجانبي -->
+    <div class="sidebar" id="sidebar">
+        <a href=>.</a>
+        <a href="allou.html" style="color: rgb(36, 255, 80); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">الخدمات </a>
+        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9"  style="color: rgb(117, 255, 18); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">اتصل بنا </a>
+        <a href="mailto:soufianallou4@gmail.com">soufiane-allou</a>
+        <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" style="color: rgb(21, 228, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">Black(S)White Design</a>
+       
+    </div>
+
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main">
+        <!-- العنوان -->
+     
+        <div class="title">
+            <span class="black">Black</span>
+            <span class="white">White</span>
+            <span class="design">Design</span>
+        </div>
+
+
+        <!-- الأيقونات في وسط الصفحة -->
+        <div class="icon-container">
+            <!-- ضع رابط الصور لكل أيقونة هنا -->
+
+
+        <!-- أيقونات التواصل الاجتماعي -->
+        <div class="social-icons">
+            <!-- ضع رابط الصور لكل أيقونة تواصل اجتماعي هنا -->
+            <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank"><img src="image1/fqcceb.jpg" alt="Facebook"></a>
+            <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9"> <img src="image1/zhqtsqp.jpg"></a>
+            <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank"><img src="image1/instrgrq,.jpg" alt="Instagram"></a>
+            <a href="soufianallou4@gmail.com"><img src="image1/imail.jpg" alt="Gmail"></a>
+        </div>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            /* استخدام تدرج لوني بألوان فاتحة ومتناسقة */
+            background: linear-gradient(45deg, #73ea3d, #6200bd, #0df9e9, #ffa200); /* يمكنك تعديل الألوان هنا */
+            background-size: 400% 400%; /* التحكم بحجم التدرج */
+            animation: gradientAnimation 15s ease infinite; /* جعل الخلفية تتحرك بشكل سلس */
+        }
+
+        /* إضافة حركة لتدرج الألوان */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 90% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            color: #0d9aff;
+            margin: 20px 0;
+        }
+        .slider {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            color: rgb(43, 0, 53);
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            background: linear-gradient(145deg, #6a07ff3a, #9b13cd4d);
+            box-shadow: 6px 6px 12px #af37ff44, -6px -6px 12px #67009b57;
+        }
+        .icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        .icon1 {
+            background: linear-gradient(145deg, #87960148, #00d9ff49);
+            box-shadow: 6px 6px 12px #1eff0043, -6px -6px 12px #9499004b;
+        }
+        .icon2 {
+            background: linear-gradient(145deg, #3498db3d, #297fb952);
+            box-shadow: 6px 6px 12px #2874a64b, -6px -6px 12px #5dade256;
+        }
+        .icon3 {
+            background: linear-gradient(145deg, #21a30048, #00ff6a46);
+            box-shadow: 6px 6px 12px #b5c80850, -6px -6px 12px #009c413b;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    
+        .icon-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+    
+        .icon {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 7px solid #46ff3c; /* حواف لتمييز الأيقونات */
+        }
+    
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* يجعل الصورة تغطي كامل الأيقونة */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- معرض الصور المتغيرة -->
+    <div class="slider">
+        <img src="image1/BLACKK1.png" class="active" alt="صورة 1">
+        <img src="image1/BLACK2.png" alt="صورة 2">
+        <img src="image1/BLACK3.png" صورة 3">
+    </div>
+
+    <!-- الأيقونات في الوسط -->
+    <div class="container">
+        <div class="icon-row">
+            <div class="icon icon1">
+                <a href="style.html">
+                    <img src="image1/zikon (2).png" alt="Icon 1">
+                </a>
+                .
+            </div>
+            <div class="icon icon2">
+                <a href="black.html">
+                    <img src="image1/ggggggp.png" alt="Icon 2">
+                </a>
+                .
+            </div>
+        </div>
+        <div class="icon-row">
+            <div class="icon icon3">
+                <a href="allou.html">
+                    <img src="image1/SERVES.png" alt="Icon 3">
+                </a>
+                .
+            </div>
+        </div>
+    </div>
+    
+    <!-- الأيقونة الجديدة في أسفل اليسار -->
+    <div class="icon bottom-left-icon">
+        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">
+            <img src="image1/zikon (3).png" alt="Icon 4">
+        </a>
+        .
+    </div>
+    
+
+    <script>
+        // كود لتغيير الصور تلقائيًا
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider img');
+        setInterval(() => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, 3000); // تغيير الصورة كل 3 ثواني
+    </script>
+
+    <script>
+        // وظيفة لإظهار وإخفاء الشريط الجانبي
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+                sidebar.style.width = "200px";
+            } else {
+                sidebar.style.width = "0";
+            }
+        }
+    </script>
+</body>
+</html>
