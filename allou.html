@@ -195,7 +195,7 @@
         <style>
             .title {
                 position: absolute;
-                top: 50px; /* المسافة من أعلى الصفحة */
+                top: 70px; /* المسافة من أعلى الصفحة */
                 text-align: center;
                 font-size: 36px; /* حجم الخط */
                 width: 100%;
@@ -285,7 +285,7 @@ setInterval(showNextImage, 3000);
 </script>
 
             <h2 class="hotel-tagline" style="text-align: center;">
-                <p style="color: rgb(61, 255, 7);">PNG JPG PDF MP4تصاميم جاهزة للطباعة بجودة عالية </p>
+                <p style="color: rgb(0, 0, 0);">PNG JPG PDF MP4تصاميم جاهزة للطباعة بجودة عالية </p>
             </h2>
 
             <div class="icon-container">
@@ -319,8 +319,8 @@ setInterval(showNextImage, 3000);
                     }
                 
                     .buy-button {
-                        background-color: #007BFF; /* لون الزر */
-                        color: white; /* لون النص */
+                        background-color: #1e9800f9; /* لون الزر */
+                        color: rgb(255, 255, 255); /* لون النص */
                         padding: 10px 15px; /* مساحة داخلية */
                         border: none; /* إزالة الحدود */
                         border-radius: 5px; /* زوايا دائرية */
@@ -330,7 +330,7 @@ setInterval(showNextImage, 3000);
                     }
                 
                     .buy-button:hover {
-                        background-color: #0056b3; /* لون الخلفية عند التمرير */
+                        background-color: #3eff09; /* لون الخلفية عند التمرير */
                     }
                 
                     .star-rating {
@@ -381,6 +381,171 @@ setInterval(showNextImage, 3000);
             flex: 0 1 100%; /* عنصر واحد في الصف */
         }
     }
+     /* From Uiverse.io by vinodjangid07 */ 
+.rating-card {
+    width: 420px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f0c29;
+    background: linear-gradient(to right bottom, #5146cd00, #0f0c2900);
+    padding: 20px 20px;
+    border-radius: 10px;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.058);
+  }
+  .text-wrapper {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .text-primary {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .text-secondary {
+    color: #000000;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .rating-stars-container {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .star-label svg {
+    fill: rgb(255, 253, 240);
+    width: 20px;
+    height: auto;
+  }
+  .rating-stars-container input {
+    appearance: unset;
+  }
+  .rating-stars-container input:hover ~ .star-label svg {
+    fill: rgb(255, 204, 185);
+  }
+  .rating-stars-container input:checked ~ .star-label svg {
+    fill: rgb(255, 102, 47);
+    animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes slide-in-fwd-center {
+    0% {
+      transform: scale(1.6);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .socials-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(0, 0, 0);
+  }
+  .social-button {
+    text-decoration: none;
+  }
+  .social-button svg {
+    width: 15px;
+    fill: rgb(0, 0, 0);
+  }
+  .social-button:hover svg {
+    fill: rgb(68, 255, 0);
+  }
+  /* From Uiverse.io by RodolpheANDRIEUX */ 
+.cube-container {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+    margin: 50px auto;
+    transition: 0.8s ease-out;
+  }
+  
+  .cube-container:hover {
+    transform: scale(2);
+  }
+  
+  .cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 8s infinite linear;
+  }
+  
+  .face {
+    --french: linear-gradient(
+        to right,
+        #0000ff,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #ff0000
+      )
+      1;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 200px;
+    background: #000000cc;
+    border: 2px solid;
+    border-image: var(--french);
+  }
+  
+  .front {
+    transform: translateZ(100px);
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+  
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  
 </style>
                 
                 <div class="room-item"> 
@@ -394,7 +559,7 @@ setInterval(showNextImage, 3000);
                             <input type="hidden" name="amount" value="10">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
-                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="hidden" name="cancel_return" value="https://soufiane-allou.github.io/black-S-white-design/">
                             <input type="submit" value="اشترِ الآن" class="buy-button">
                         </form>
                         <div class="star-rating">
@@ -422,7 +587,7 @@ setInterval(showNextImage, 3000);
                             <input type="hidden" name="amount" value="10">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%201%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
-                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="hidden" name="cancel_return" value="https://soufiane-allou.github.io/black-S-white-design/">
                             <input type="submit" value="اشترِ الآن" class="buy-button">
                         </form>
                         <div class="star-rating">
@@ -450,7 +615,7 @@ setInterval(showNextImage, 3000);
                             <input type="hidden" name="amount" value="10">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
-                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="hidden" name="cancel_return" value="https://soufiane-allou.github.io/black-S-white-design/">
                             <input type="submit" value="اشترِ الآن" class="buy-button">
                         </form>
                         
@@ -479,7 +644,7 @@ setInterval(showNextImage, 3000);
                             <input type="hidden" name="amount" value="55">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="return" value="https://wa.me/212601848594?text=%D9%ل%D9%ق%D8%د%20%D9%ق%D9%م%D8%AA%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20Room%202%20%D8%A8%D9%85%D8%A8%D9%84%D8%BA%20$5%20%D9%و%D8%A7%D8%B3%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A%20:%20%D8%A7%D8%AF%D8%AE%D9%84%20%D8%A7%D8%B3%D9%85%D9%83%20%D9%و%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%D9%83">
-                            <input type="hidden" name="cancel_return" value="https://example.com/cancel">
+                            <input type="hidden" name="cancel_return" value="https://soufiane-allou.github.io/black-S-white-design/">
                             <input type="submit" value="اشترِ الآن" class="buy-button">
                         </form>
                         
@@ -494,46 +659,63 @@ setInterval(showNextImage, 3000);
                         <div class="star-rating user-rating">
                          
                     </div>
-                </
+                
 </main>
-        </div>
+<div class="rating-card">
+    <div class="text-wrapper">
+      <p class="text-primary">Please Rate Your Experience</p>
+      <p class="text-secondary">black white design</p>
     </div>
-</main>
-</div>
-<div class="icon">
-  <b></b>
-  <div class="content">
-       <p style="color: rgb(0, 0, 0);">                    للمزيد من المعلومات        <br><span>  </span></p>
-      <li>
-        <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank">
-          <svg class="fa-brands fa-facebook" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.twitter.com" target="_blank">
-          <svg class="fa-brands fa-twitter" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.linkedin.com" target="_blank">
-          <svg class="fa-brands fa-linkedin-in" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank">
-          <svg class="fa-brands fa-instagram" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-
-
-
+  
+    <div class="rating-stars-container">
+      <input value="star-5" name="star" id="star-5" type="radio" />
+      <label for="star-5" class="star-label">
+        <svg viewBox="0 0 24 24" xmlns="https://www.facebook.com/profile.php?id=61565936185764">
+          <path
+            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"
+          ></path>
+        </svg>
+      </label>
+      <input value="star-4" name="star" id="star-4" type="radio" />
+      <label for="star-4" class="star-label">
+        <svg viewBox="0 0 24 24" xmlns="https://www.facebook.com/profile.php?id=61565936185764">
+          <path
+            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"
+          ></path>
+        </svg>
+      </label>
+      <input value="star-3" name="star" id="star-3" type="radio" />
+      <label for="star-3" class="star-label">
+        <svg viewBox="0 0 24 24" xmlns="https://www.facebook.com/profile.php?id=61565936185764">
+          <path
+            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"
+          ></path>
+        </svg>
+      </label>
+      <input value="star-2" name="star" id="star-2" type="radio" />
+      <label for="star-2" class="star-label">
+        <svg viewBox="0 0 24 24" xmlns="https://www.facebook.com/profile.php?id=61565936185764">
+          <path
+            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"
+          ></path>
+        </svg>
+      </label>
+      <input value="star-1" name="star" id="star-1" type="radio" />
+      <label for="star-1" class="star-label">
+        <svg viewBox="0 0 24 24" xmlns="https://www.facebook.com/profile.php?id=61565936185764">
+          <path
+            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"
+          ></path>
+        </svg>
+      </label>
+    </div>
+        </div>
+ 
     <script src="allou.java"></script>
 </body>
 </html>
