@@ -6,7 +6,7 @@
     <title>Black(S)White </title>
     <div class="content">
         <nav class="navbar" style="background-color: #000417fe; color: rgb(25, 236, 225); display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
-            <div style="font-size: 19px; font-weight: bold;">a_s_oufian </div>
+            <div style="font-size: 19px; font-weight: bold;">a_s_soufian </div>
             <div>
                 <a href="mailto:soufianallou4@gmail.com" style="color: rgb(255, 255, 255); text-decoration: none; padding: 10px 15px; transition: background-color 0.3s ease;">عن الموقع</a>
                 
@@ -62,11 +62,11 @@
 
         .menu-btn {
             position: fixed;
-            top: 64px;
+            top: 44px;
             left: 3px;
             font-size: 40px;
             cursor: pointer;
-            color: rgb(229, 255, 0);
+            color: rgb(239, 255, 238);
             background: none;
             border: none;
             outline: none;
@@ -93,7 +93,7 @@
 
         .title .black { color: rgb(0, 0, 0); }
         .title .white { color: rgb(255, 255, 255); }
-        .title .design { color: rgb(218, 255, 10); }
+        .title .design { color: rgb(255, 153, 0); }
 
         /* معرض الصور تحت العنوان */
         .slideshow-container {
@@ -127,10 +127,10 @@
         }
 
         .social-icons img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 22%;
-         /* تحويل الأيقونات إلى الأبيض والأسود */
+            filter: grayscale(100%); /* تحويل الأيقونات إلى الأبيض والأسود */
         }
 
         /* التأثير الاحترافي عند التمرير */
@@ -246,7 +246,7 @@
             margin: 0;
             padding: 0;
             /* استخدام تدرج لوني بألوان فاتحة ومتناسقة */
-            background: linear-gradient(45deg, #eaff04, #0acaff, #d20df9, #00ffee); /* يمكنك تعديل الألوان هنا */
+            background: linear-gradient(45deg, #73ea3d, #6200bd, #0df9e9, #ffa200); /* يمكنك تعديل الألوان هنا */
             background-size: 400% 400%; /* التحكم بحجم التدرج */
             animation: gradientAnimation 15s ease infinite; /* جعل الخلفية تتحرك بشكل سلس */
         }
@@ -263,10 +263,10 @@
         }
         .slider {
             width: 80%;
-            margin: 8px auto;
+            margin: 20px auto;
             overflow: hidden;
             border-radius: 15px;
-            box-shadow: 0 30px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .slider img {
             width: 100%;
@@ -339,12 +339,12 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            border: 5px solid #00ff00; /* حواف لتمييز الأيقونات */
+            border: 7px solid #46ff3c; /* حواف لتمييز الأيقونات */
         }
     
         .icon img {
-            width: 103%;
-            height: 103%;
+            width: 100%;
+            height: 100%;
             object-fit: cover; /* يجعل الصورة تغطي كامل الأيقونة */
             position: absolute;
             top: 0;
@@ -368,7 +368,7 @@
         <div class="icon-row">
             <div class="icon icon1">
                 <a href="style.html">
-                    <img src="image1/looogggooo.jpg" alt="Icon 1">
+                    <img src="image1/zikon (2).png" alt="Icon 1">
                 </a>
                 .
             </div>
@@ -388,13 +388,14 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="icon-row">
-            <div class="icon icon1">
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">
-                    <img src="image1/zikon (3).png" alt="Icon 1">
-                </a>
-                .
+    
+    <!-- الأيقونة الجديدة في أسفل اليسار -->
+    <div class="icon bottom-left-icon">
+        <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">
+            <img src="image1/zikon (3).png" alt="Icon 4">
+        </a>
+        .
+    </div>
     
 
     <script>
@@ -419,6 +420,5 @@
             }
         }
     </script>
-    
 </body>
 </html>
