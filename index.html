@@ -18,8 +18,8 @@
                 font-family: Arial, sans-serif;
                 background-color: #000;
                 color: #fff;
-                height: 100%;
-                overflow: hidden;
+                height: auto; /* تعديل لتكون الصفحة قابلة للتمرير */
+                overflow-x: hidden; /* منع التمرير الأفقي */
             }
     
             .container {
@@ -62,7 +62,7 @@
             .btn {
                 padding: 10px 20px;
                 border: none;
-                background-color: #4ff439;
+                background-color: #21b50e;
                 color: #000;
                 cursor: pointer;
                 font-weight: bold;
@@ -76,7 +76,7 @@
             }
     
             .thumbnails img {
-                width: 100px;
+                width: 200px;
                 height: 100px;
                 cursor: pointer;
                 border-radius: 10px;
@@ -88,7 +88,7 @@
             }
     
             body.nature {
-                background-image: url("image1/ol.jpg");
+                background-image: url("image1/yyk.jpg");
                 background-size: cover;
                 background-position: center;
             }
@@ -98,13 +98,15 @@
                 background-size: cover;
                 background-position: center;
             }
+    
             body.mountain1 {
                 background-image: url("image1/ttk.jpg");
                 background-size: cover;
                 background-position: center;
             }
+    
             body.mountain2 {
-                background-image: url("image1/yyk.jpg");
+                background-image: url("image1/ol.jpg");
                 background-size: cover;
                 background-position: center;
             }
@@ -114,9 +116,108 @@
                 background-size: cover;
                 background-position: center;
             }
+    
+            .icons-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+    
+            .icon {
+                width: 150px;
+                padding: 20px;
+                border-radius: 15px;
+                background-color: #f9f5e8;
+                transition: transform 0.3s;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .icon:hover {
+                transform: scale(1.1);
+            }
+    
+            .details {
+                display: none;
+                background-color: #ffffff;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 60%;
+                margin: 0 auto;
+            }
+    
+            .details.active {
+                display: block;
+            }
+    
+            .price {
+                font-size: 18px;
+                color: red;
+                text-decoration: line-through;
+            }
+    
+            .discount-price {
+                font-size: 24px;
+                color: #2c8d2e;
+            }
+    
+            .buy-button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #0070ba;
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            .buy-button:hover {
+                background-color: #005a9c;
+            }
+    
+            .scrolling-container {
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+                position: relative;
+                background-color: #28111100;
+                padding: 10px 0;
+            }
+    
+            .scrolling-container img {
+                width: 100px;
+                height: 100px;
+                margin: 0 15px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 8px;
+                transition: transform .1s ease;
+            }
+    
+            @keyframes scroll {
+                from {
+                    transform: translateX(20%);
+                }
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+    
+            .scrolling-track {
+                display: inline-block;
+                white-space: nowrap;
+                animation: scroll 15s linear infinite;
+            }
+    
         </style>
     </head>
-    <img src="image1/666666.png" alt="Thumbnail" style="position: absolute; top:-11px; right: -65px; width: 225px; height: auto;">
+    <img src="image1/666666.png" alt="Thumbnail" style="position: absolute; top:31px; right: -35px; width: 175px; height: auto;">
+    <li>
     <body class="nature">
         <div class="container">
             <nav>
@@ -124,24 +225,194 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==">About</a></li>
                     <li><a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==">me</a></li>
-                    <li><a href="roto.html">Services</a></li>
+                    <li><a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">Services</a></li>
                     <li><a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">Contact</a></li>
                 </ul>
             </nav>
             <div class="slider">
-                <h1 id="main-title">SoufianE Design </h1>
-                <h2 id="sub-title">GRAPHIC Design</h2>
+                <h1 id="main-title">Soufiane Allou</h1>
+                <h2 id="sub-title"> BLACK WHITE Design</h2>
                 <p id="description">Welcome to BLACK WHITE Design. Many services are waiting for you</p>
-                <a href="roto.html">
-                    <img src="image1/_.png"See More style="width: 100px; height: auto;">
-                </a>
-              
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #ffd82d00;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                    h1 {
+                        color: #76d36a;
+                    }
+                    .icons-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                    }
+                    .icon { border: 3px solid #69ff1e;
+                        width: 180px;
+                        padding: 20px;
+                        border-radius: 15px;
+                        background-color: #0000005a;
+                        transition: transform 0.3s;
+                        cursor: pointer;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    }
+                    .icon:hover {
+                        transform: scale(1.1);
+                    }
+                    .details {
+                        border: 5px solid #00000078;
+                        display: none;
+                        background-color: #000000a5;
+                        padding: 5px;
+                        margin-top: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0 44px 8px rgba(0, 0, 0, 0.2);
+                        width: 68%;
+                        margin: 0 auto;
+                    }
+                    .details.active {
+                        display: block;
+                    }
+                    .price {
+                        font-size: 24px;
+                        color: red;
+                        text-decoration: line-through;
+                    }
+                    .discount-price {
+                        font-size: 24px;
+                        color: #40ec42;
+                    }
+                    .buy-button {
+                        margin-top: 10px;
+                        padding: 10px 20px;
+                        background-color: #23ec37;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 16px;
+                    }
+                    .buy-button:hover {
+                        background-color: #005a9c;
+                    }
+                </style>
+            </head>
+            <body>
+               
+                <div class="icons-container">
+                    <div class="icon" onclick="showDetails('watch')">
+                        <img src="image1/dddd (4).png" alt="ساعة" width="100%">
+                        <p style="color: rgb(255, 255, 255);">Graphic design</p>
+                    </div>
+                    <div class="icon" onclick="showDetails('graphic')">
+                        <img src="image1/dddd (3).png" alt="تصميم جرافيك" width="100%">
+                            <p style="color: rgb(255, 255, 255);">Brand design /
+                                Logo design</p>
+                    </div>
+                    <div class="icon" onclick="showDetails('feasibility')">
+                        <img src="image1/dddd (2).png" alt="دراسة جدوى" width="100%">
+                        <p style="color: rgb(255, 255, 255);"> feasibility study </p>
+                    </div>
+                    <div class="icon" onclick="showDetails('brand')">
+                        <img src="image1/dddd (1).png" alt="تصميم علامة تجارية" width="100%">
+                            <p style="color: rgb(255, 255, 255);">Online store 
+                                Personal website </p>
+                        
+
+                    </div>
+                </div>
+            
+                <div id="watch" class="details">
+                    <h2> Graphic design</h2>
+                    <p class="price">$10</p> <p class="discount-price">$2</p>
+                    <p>  Lots of printable templates and posters to start your own project  </p>
+                    <p>  الكثير من القوالب و الملصقات الجاهزة للطباعة لتبدأ مشروعك الخاص  </p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                        <input type="hidden" name="item_name" value="Graphic design">
+                        <input type="hidden" name="amount" value="15">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20graphic%20design%20بمبلغ%20$2">
+                        <input type="submit" value="اشترِ الآن" class="buy-button">
+                    </form>
+                </div>
+            
+                <div id="graphic" class="details">
+                    <h2>Designing logos and brands  </h2>
+                    <p class="price">$15</p> <p class="discount-price">$8</p>
+                    <p>Designing logos and brands 
+                        Get your unique brand and give it a special visual appeal that attracts customers </p>
+                    <p> 
+                        تصميم شعارات وعلامات تجارية 
+                        احصل على علامتك التجارية الفريدة احصل على لمحة بصرية خاصة  تجدب الزبائن
+                        </p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                        <input type="hidden" name="item_name" value="logos">
+                        <input type="hidden" name="amount" value="3">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20logo%20design%20بمبلغ%208$">
+                        <input type="submit" value="اشترِ الآن" class="buy-button">
+                    </form>
+                </div>
+            
+                <div id="feasibility" class="details">
+                    <h2> feasibility study</h2>
+                    <h2>دراسة جدوى شاملة</h2>
+                    <p class="price">$15</p> <p class="discount-price">$10</p>
+                    <p>                    Comprehensive feasibility study for projects 
+                        Do you need help with a feasibility study for your project? I provide comprehensive study services + a business plan to start and develop your project smoothly </p>
+                    <p>هل تحتاج مساعده في دراسة جدوى لمشروعك أنا أقدم خدمات دراسة شاملة+خطة عمل لتبدأ و تنمي مشروعك بسلاسة</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                        <input type="hidden" name="item_name" value="دراسة جدوى">
+                        <input type="hidden" name="amount" value="10">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20دراسة%20جدوى%20بمبلغ%2010$
+">
+                        <input type="submit" value="اشترِ الآن" class="buy-button">
+                    </form>
+                </div>
+            
+                <div id="brand" class="details">
+                    <h2>Personal website/Online store </h2>
+                    <p class="price">$70</p> <p class="discount-price">$55</p>
+                    <p>Create a personal website
+                        Create an online store according to the description</p>
+                        
+                        <p>انشاء صفحه ويب شخصية 
+                        /انشاء متجر الكتروني حسب الوصف</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="soufianallou4@gmail.com">
+                        <input type="hidden" name="item_name" value="Create a personal web page ">
+                        <input type="hidden" name="amount" value="8">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20انشاء%20متجر%20الكتروني%20بمبلغ%2055$
+">
+                        <input type="submit" value="اشترِ الآن" class="buy-button">
+                    </form>
+                </div>
+            
+                <script>
+                    function showDetails(id) {
+                        document.querySelectorAll('.details').forEach(detail => {
+                            detail.classList.remove('active');
+                        });
+                        document.getElementById(id).classList.add('active');
+                    }
+                </script>
             
             <div class="thumbnails">
-                <img src="image1/ol.jpg"alt="Nature" onclick="changeContent('nature')">
+                <img src="image1/yyk.jpg"alt="Nature" onclick="changeContent('nature')">
                 <img src="image1/_kp.jpg" onclick="changeContent('mountain')">
                 <img src="image1/ttk.jpg" onclick="changeContent('mountain1')">
-                <img src="image1/yyk.jpg" onclick="changeContent('mountain2')">
+                <img src="image1/ol.jpg" onclick="changeContent('mountain2')">
                 <img src="image1/33.jpg" alt="Nature" onclick="changeContent('flower')">
             </div>
         </div>
@@ -257,37 +528,91 @@
                     white-space: nowrap;
                     animation: scroll 15s linear infinite;
                 }
-                .social-icons {
-                    position: absolute;
-                    bottom:5px;
-                    right: 5px;
-                    display: flex;
-                    gap: 9px; /* إضافة فراغات بين الأيقونات */
-                }
-        
-                .social-icons a {
-                    margin: 0;
-                    display: inline-block;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* إضافة تأثيرات عند التمرير */
-                }
-        
-                .social-icons img {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 22%;
-                 /* تحويل الأيقونات إلى الأبيض والأسود */
-                }
-        
-                /* التأثير الاحترافي عند التمرير */
-                .social-icons a:hover img {
-                    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
-                    filter: none; /* إزالة تأثير الأبيض والأسود */
-                    box-shadow: 0 4px 15px rgba(111, 255, 9, 0.933); /* إضافة ظل حول الأيقونة */
-                }
+            
                 
             </style>
         </head>
         <body>
+            <style>
+                /* General Styles */
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, sans-serif;
+                    background-color: #f0f0f0;
+                    overflow-x: hidden;
+                }
+        
+                /* Social Icons Container */
+                .social-icons {
+                    position:  absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    gap: 20px;
+                    z-index: 10;
+                }
+        
+                .social-icons .icon {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #333;
+                    color: #fff;
+                    font-size: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                    text-decoration: none;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    background-size: 70%; /* Resize images to fit icon */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+        
+                .social-icons .icon:hover {
+                    transform: translateY(-5px) scale(1.1);
+                    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+                }
+        
+                /* Icon Background Images */
+                .facebook {
+                    background-color: #3b5998;
+                    background-image: url("image1/fqcceb.jpg"); /* Replace with your image path */
+                }
+        
+                .whatsapp {
+                    background-color: #25d366;
+                    background-image: url("image1/zhqtsqp.jpg"); /* Replace with your image path */
+                }
+        
+                .instagram {
+                    background: radial-gradient(circle at 30% 30%, #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+                    background-image: url("image1/instrgrq\,.jpg"); /* Replace with your image path */
+                }
+        
+                .gmail {
+                    background-color: #ea4335;
+                    background-image: url("image1/imail.jpg"); /* Replace with your image path */
+                }
+            </style>
+        </head>
+        <body>
+        
+            <!-- Content of the page -->
+            <div class="content">
+                <!-- ضع هنا محتوى الصفحة -->
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="icon facebook"></a>
+                <a href="https://wa.me/212601848594" target="_blank" class="icon whatsapp"></a>
+                <a href="https://instagram.com" target="_blank" class="icon instagram"></a>
+                <a href="mailto:yourmail@example.com" target="_blank" class="icon gmail"></a>
+            </div>
         
             <!-- Scrolling Thumbnails Section -->
             <div class="scrolling-container">
@@ -309,42 +634,29 @@
                     <img src="image1/SOSOSOS (4).png">
                     <img src="image1/SOSOSOS (5).png">
                     <img src="image1/SOSOSOS (6).png">
-                    <img src="image1/LOGO1.png" alt="Image 6">
+                    <img src="image1/SOSOSOS (6).png">
+                    <img src="image1/LOGO1.png" alt="Image 6">  
                     <img src="image1/LOGOKKOP (2).png" alt="Image 1">
                     <img src="image1/LOGOKKOP (3).png" alt="Image 2">
                     <img src="image1/LOGOKKOP (4).png" alt="Image 3">
-                    <img src="image1/LOGO1.png" alt="Image 4">
                     
-                    <p style="color: rgba(222, 197, 3, 0);">.</p>
-                </h2>
-                <p style="color: rgba(222, 197, 3, 0);">.</p>
-              </h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-            </h2>
-        </h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-    </h2>
-</h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-</h2>
-</h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-</h2>
-</h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-</h2>
-  </h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
-            </h2>
+                
             
+</h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
+</h2>
+</h2>   <p style="color: rgba(222, 197, 3, 0);">.</p>
+</h2>
+           
+
                 </div>
                 <section class="footer">
                     <p></p>
                 </section>
+                
             </div>
-            <div class="social-icons">
-                <!-- ضع رابط الصور لكل أيقونة تواصل اجتماعي هنا -->
-                <a href="https://www.facebook.com/profile.php?id=61565936185764" target="_blank"><img src="image1/fqcceb.jpg" alt="Facebook"></a>
-                <a href="https://wa.me/212601848594?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9"> <img src="image1/zhqtsqp.jpg"></a>
-                <a href="https://www.instagram.com/a_s_soufian?igsh=MTA5dGJsMHpxenZwbA==" target="_blank"><img src="image1/instrgrq,.jpg" alt="Instagram"></a>
-                <a href="soufianallou4@gmail.com"><img src="image1/imail.jpg" alt="Gmail"></a>
-            </div>
+            
         </div>   
-          <!-- أيقونات التواصل الاجتماعي -->
+
     
         </body>
         </html>
