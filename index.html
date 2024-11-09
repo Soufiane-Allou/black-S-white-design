@@ -243,33 +243,39 @@
                     h1 {
                         color: #76d36a;
                     }
-                    .icons-container {
+                    .images-container {
                         display: flex;
                         justify-content: center;
-                        gap: 20px;
+                        gap: 9px;
                         flex-wrap: wrap;
                     }
-                    .icon { border: 3px solid #69ff1e;
-                        width: 150px;
-                        padding: 20px;
+                    .image {
+                        border: 3px solid #69ff1e;
+                        width: 110px;
                         border-radius: 15px;
                         background-color: #0000005a;
                         transition: transform 0.3s;
                         cursor: pointer;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
                     }
-                    .icon:hover {
+                    .image img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 12px;
+                    }
+                    .image:hover {
                         transform: scale(1.1);
                     }
                     .details {
                         border: 5px solid #00000078;
                         display: none;
-                        background-color: #000000a5;
-                        padding: 5px;
+                        background-color: #050304a5;
+                        padding: 20px;
                         margin-top: 20px;
-                        border-radius: 10px;
+                        border-radius: 50px;
                         box-shadow: 0 44px 8px rgba(0, 0, 0, 0.2);
-                        width: 68%;
+                        width: 48%;
                         margin: 0 auto;
                     }
                     .details.active {
@@ -298,37 +304,51 @@
                         background-color: #005a9c;
                     }
                 </style>
-            </head>
-            <body>
-               
-                <div class="icons-container">
-                    <div class="icon" onclick="showDetails('watch')">
-                        <img src="image1/dddd (4).png" alt="ساعة" width="100%">
-                        <p style="color: rgb(255, 255, 255);">Graphic design</p>
+                
+                <div class="images-container">
+                    <div class="image" onclick="showDetails('watch')">
+                        <img src="image1/WWW (2).png" alt="ساعة">
                     </div>
-                    <div class="icon" onclick="showDetails('graphic')">
-                        <img src="image1/dddd (3).png" alt="تصميم جرافيك" width="100%">
-                            <p style="color: rgb(255, 255, 255);">Brand design /
-                                Logo design</p>
+                    <div class="image" onclick="showDetails('graphic')">
+                        <img src="image1/WWW (1).png" alt="تصميم جرافيك">
                     </div>
-                    <div class="icon" onclick="showDetails('feasibility')">
-                        <img src="image1/dddd (2).png" alt="دراسة جدوى" width="100%">
-                        <p style="color: rgb(255, 255, 255);"> feasibility study </p>
+                    <div class="image" onclick="showDetails('feasibility')">
+                        <img src="image1/WWW (3).png" alt="دراسة جدوى">
                     </div>
-                    <div class="icon" onclick="showDetails('brand')">
-                        <img src="image1/dddd (1).png" alt="تصميم علامة تجارية" width="100%">
-                            <p style="color: rgb(255, 255, 255);">Online store 
-                                Personal website </p>
-                        
-
+                    <div class="image" onclick="showDetails('brand')">
+                        <img src="image1/WWW (4).png" alt="تصميم علامة تجارية">
                     </div>
                 </div>
+                
+                
+                <!-- Repeat similar code for 'graphic', 'feasibility', and 'brand' details sections -->
+                
+                <script>
+                    function showDetails(id) {
+                        document.querySelectorAll('.details').forEach(detail => detail.classList.remove('active'));
+                        document.getElementById(id).classList.add('active');
+                    }
+                
+                    // إخفاء خانة التفاصيل عند النقر خارجها
+                    document.addEventListener('click', function(event) {
+                        const activeDetail = document.querySelector('.details.active');
+                        const images = document.querySelectorAll('.image');
+                        const isClickInsideImage = Array.from(images).some(image => image.contains(event.target));
+                
+                        if (activeDetail && !isClickInsideImage && !activeDetail.contains(event.target)) {
+                            activeDetail.classList.remove('active');
+                        }
+                    });
+                </script>
+                
             
+                    </div>
+                </div>
                 <div id="watch" class="details">
-                    <h2> Graphic design</h2>
-                    <p class="price">$10</p> <p class="discount-price">$2</p>
-                    <p>  Lots of printable templates and posters to start your own project  </p>
-                    <p>  الكثير من القوالب و الملصقات الجاهزة للطباعة لتبدأ مشروعك الخاص  </p>
+                    <h2>Graphic design</h2>
+                    <p class="price">$10</p> 
+                    <p class="discount-price">$2</p>
+                    <p>الكثير من القوالب والملصقات الجاهزة للطباعة لتبدأ مشروعك الخاص</p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_xclick">
                         <input type="hidden" name="business" value="soufianallou4@gmail.com">
@@ -336,36 +356,104 @@
                         <input type="hidden" name="amount" value="2">
                         <input type="hidden" name="currency_code" value="USD">
                         <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20graphic%20design%20بمبلغ%20$2">
+                        
                         <input type="submit" value="اشترِ الآن" class="buy-button">
                     </form>
+                    
+                    <!-- زر مشاهدة -->
+                    <a href="black.html" target="_blank" class="view-button">مشاهدة</a>
                 </div>
-            
-                <div id="graphic" class="details">
-                    <h2>Designing logos and brands  </h2>
-                    <p class="price">$15</p> <p class="discount-price">$8</p>
-                    <p>Designing logos and brands 
-                        Get your unique brand and give it a special visual appeal that attracts customers </p>
-                    <p> 
-                        تصميم شعارات وعلامات تجارية 
-                        احصل على علامتك التجارية الفريدة احصل على لمحة بصرية خاصة  تجدب الزبائن
-                        </p>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                        <input type="hidden" name="cmd" value="_xclick">
-                        <input type="hidden" name="business" value="soufianallou4@gmail.com">
-                        <input type="hidden" name="item_name" value="logos">
-                        <input type="hidden" name="amount" value="8">
-                        <input type="hidden" name="currency_code" value="USD">
-                        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20logo%20design%20بمبلغ%208$">
-                        <input type="submit" value="اشترِ الآن" class="buy-button">
-                    </form>
-                </div>
+                
+                <style>
+                    .buy-button {
+                        margin-top: 10px;
+                        padding: 10px 20px;
+                        background-color: #22c732;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 16px;
+                    }
+                    .buy-button:hover {
+                        background-color: #005a9c;
+                    }
+                    
+                    .view-button {
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 10px 20px;
+                        background-color: #ffb50a;
+                        color: #ffffff;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        text-decoration: none;
+                        transition: background-color 0.3s;
+                    }
+                    .view-button:hover {
+                        background-color: #e67e22;
+                    }
+                </style>
+
+        <div id="graphic" class="details">
+    <h2>Designing logos and brands</h2>
+    <p class="price">$15</p> 
+    <p class="discount-price">$8</p>
+    <p>Designing logos and brands 
+        تصميم شعارات وعلامات تجارية 
+        احصل على علامتك التجارية الفريدة واحصل على لمحة بصرية خاصة تجذب الزبائن
+    </p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="soufianallou4@gmail.com">
+        <input type="hidden" name="item_name" value="logos">
+        <input type="hidden" name="amount" value="8">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="return" value="https://wa.me/212601848594?text=لقد%20قمت%20بشراء%20logo%20design%20بمبلغ%208$">
+        
+        <input type="submit" value="اشترِ الآن" class="buy-button">
+    </form>
+    
+    <!-- زر مشاهدة -->
+    <a href="allou.html" target="_blank" class="view-button">مشاهدة</a>
+</div>
+
+<style>
+    .buy-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #22c732;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .buy-button:hover {
+        background-color: #005a9c;
+    }
+    
+    .view-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #ff9800;
+        color: #ffffff;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    .view-button:hover {
+        background-color: #e67e22;
+    }
+</style>
+
             
                 <div id="feasibility" class="details">
                     <h2> feasibility study</h2>
                     <h2>دراسة جدوى شاملة</h2>
                     <p class="price">$15</p> <p class="discount-price">$10</p>
-                    <p>                    Comprehensive feasibility study for projects 
-                        Do you need help with a feasibility study for your project? I provide comprehensive study services + a business plan to start and develop your project smoothly </p>
                     <p>هل تحتاج مساعده في دراسة جدوى لمشروعك أنا أقدم خدمات دراسة شاملة+خطة عمل لتبدأ و تنمي مشروعك بسلاسة</p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_xclick">
@@ -382,9 +470,6 @@
                 <div id="brand" class="details">
                     <h2>Personal website/Online store </h2>
                     <p class="price">$70</p> <p class="discount-price">$55</p>
-                    <p>Create a personal website
-                        Create an online store according to the description</p>
-                        
                         <p>انشاء صفحه ويب شخصية 
                         /انشاء متجر الكتروني حسب الوصف</p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -536,10 +621,11 @@
             <style>
                 /* General Styles */
                 body, html {
+                    border: 3px solid #73ff2d00;
                     margin: 0;
                     padding: 0;
                     font-family: Arial, sans-serif;
-                    background-color: #f0f0f0;
+                    background-color: #f0f0f000;
                     overflow-x: hidden;
                 }
         
@@ -555,9 +641,10 @@
                 }
         
                 .social-icons .icon {
+                    border: 3px solid #dfff27;
                     width: 50px;
                     height: 50px;
-                    background-color: #333;
+                    background-color: #000000;
                     color: #fff;
                     font-size: 24px;
                     display: flex;
