@@ -268,15 +268,19 @@
                         transform: scale(1.1);
                     }
                     .details {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                         border: 5px solid #00000078;
                         display: none;
                         background-color: #050304a5;
                         padding: 20px;
-                        margin-top: 20px;
-                        border-radius: 50px;
+                        border-radius: 15px;
                         box-shadow: 0 44px 8px rgba(0, 0, 0, 0.2);
-                        width: 48%;
-                        margin: 0 auto;
+                        width: 80%;
+                        max-width: 500px;
+                        z-index: 1000;
                     }
                     .details.active {
                         display: block;
@@ -304,6 +308,7 @@
                         background-color: #005a9c;
                     }
                 </style>
+                
                 
                 <div class="images-container">
                     <div class="image" onclick="showDetails('watch')">
