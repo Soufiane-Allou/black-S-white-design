@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOOS.MA - متجر المنتجات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #2b80ff;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* الشريط الجانبي */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 100vh;
+            background-color: #463e01;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.2);
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #222222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #ff0;
+            border-color: #ff0;
+            color: #ff0;
+        }
+
+        /* العنوان الرئيسي */
+        header {
+            text-align: center;
+            padding: 30px 100px 30px 20px;
+            margin-right: 80px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: rgb(255, 243, 12);
+           
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0;
+            }
+            to {
+                text-shadow: 0 0 15px #ff0, 0 0 25px #ff0, 0 0 40px #ff0, 0 0 50px #ffa500;
+            }
+        }
+
+        /* منطقة الأيقونات */
+        .icons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            margin-right: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            background: linear-gradient(145deg, #3e55ff, #000000);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            perspective: 1000px;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .icon-content {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .icon:hover .icon-content {
+            transform: rotateY(20deg) rotateX(10deg);
+        }
+
+        .icon-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #af9d16;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+            transform: translateZ(30px);
+        }
+
+        .icon-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .icon:hover .icon-image img {
+            transform: scale(1.1);
+        }
+
+        .icon h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff0;
+            transform: translateZ(20px);
+        }
+
+        .icon p {
+            color: #ccc;
+            line-height: 1.6;
+            transform: translateZ(15px);
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #33d738;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transform: translateZ(15px);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            transform: translateZ(15px);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateZ(15px) scale(1.05);
+        }
+
+        /* تأثيرات الضوء */
+        .light-effect {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 0, 0.4) 0%, transparent 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 1001;
+            transition: opacity 0.3s;
+        }
+
+        /* التكيف مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+            
+            header {
+                padding: 20px 70px 20px 20px;
+                margin-right: 60px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .icons-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                padding: 20px;
+                margin-right: 60px;
+            }
+            
+            .icon-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الشريط الجانبي لوسائل التواصل الاجتماعي -->
+    <div class="sidebar">
+        <div class="social-btn" onclick="showEffect(event)">
+            <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="social-btn" onclick="showEffect(event)">
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="social-btn" onclick="showEffect(event)">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="social-btn" onclick="showEffect(event)">
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div class="social-btn" onclick="showEffect(event)">
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </div>
+
+    <!-- العنوان الرئيسي -->
+    <header>
+        <h1>Pcm.MA</h1>
+        <p>متجر المنتجات الرقمية المتميزة</p>
+    </header>
+
+    <!-- منطقة المنتجات -->
+    <div class="icons-container">
+        <!-- منتج 1 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20ساعة%20أبل%20الذكية" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ساعة أبل الذكية">
+                </div>
+                <h3>ساعة أبل الذكية</h3>
+                <p>ساعة ذكية متطورة مع شاشة OLED وتتبع صحي متكامل</p>
+                <p class="price">1,200 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 2 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20سماعات%20لاسلكية" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="سماعات لاسلكية">
+                </div>
+                <h3>سماعات لاسلكية</h3>
+                <p>سماعات عالية الجودة بتقنية إلغاء الضوضاء ومقاومة للماء</p>
+                <p class="price">450 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 3 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20هاتف%20سامسونج" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="هاتف سامسونج">
+                </div>
+                <h3>هاتف سامسونج</h3>
+                <p>هاتف ذكي بشاشة 6.7 بوصة وكاميرا 108 ميجابكسل</p>
+                <p class="price">3,500 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 4 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20لوحة%20مفاتيح%20ميكانيكية" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="لوحة مفاتيح ميكانيكية">
+                </div>
+                <h3>لوحة مفاتيح ميكانيكية</h3>
+                <p>لوحة مفاتيح ميكانيكية بإضاءة RGB ومقاومة للانسكابات</p>
+                <p class="price">600 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 5 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20كاميرا%20كانون" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كاميرا كانون">
+                </div>
+                <h3>كاميرا كانون</h3>
+                <p>كاميرا رقمية احترافية بدقة 24.2 ميجابكسل وعدسة 18-55mm</p>
+                <p class="price">4,200 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 6 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20نظارة%20واقع%20افتراضي" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="نظارة واقع افتراضي">
+                </div>
+                <h3>نظارة واقع افتراضي</h3>
+                <p>نظارة الواقع الافتراضي بدقة عالية وزاوية رؤية 110 درجة</p>
+                <p class="price">850 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 7 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20حاسوب%20محمول" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="حاسوب محمول">
+                </div>
+                <h3>حاسوب محمول</h3>
+                <p>لابتوب بمعالج i7، ذاكرة 16GB، ومساحة تخزين 512GB SSD</p>
+                <p class="price">7,800 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 8 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20دراجة%20تمرين" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="دراجة تمرين">
+                </div>
+                <h3>دراجة تمرين</h3>
+                <p>دراجة تمرين ذكية مع شاشة تعمل باللمس ومقاومة مغناطيسية</p>
+                <p class="price">3,200 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 9 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20طابعة%3F" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="طابعة">
+                </div>
+                <h3>طابعة ليزر</h3>
+                <p>طابعة ليزر ملونة متعددة الوظائف مع اتصال واي فاي</p>
+                <p class="price">1,500 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+
+        <!-- منتج 10 -->
+        <a href="https://wa.me/212612345678?text=أرغب%20في%20شراء%20ماوس%20ألعاب" class="icon" target="_blank">
+            <div class="icon-content">
+                <div class="icon-image">
+                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ماوس ألعاب">
+                </div>
+                <h3>ماوس ألعاب</h3>
+                <p>ماوس ألعاب بدقة 16000 DPI وإضاءة RGB قابلة للتخصيص</p>
+                <p class="price">350 درهم</p>
+                <div class="whatsapp-btn">اطلب عبر واتساب</div>
+            </div>
+        </a>
+    </div>
+ <header>
+        <p>متجر المنتجات الرقمية المتميزة</p>
+    </header>
+    <!-- تأثير الضوء -->
+    <div class="light-effect" id="lightEffect"></div>
+
+    <script>
+        // تأثير الضوء عند النقر على أيقونات الوسائط الاجتماعية
+        function showEffect(event) {
+            const effect = document.getElementById('lightEffect');
+            effect.style.left = ${event.clientX}px;
+            effect.style.top = ${event.clientY}px;
+            effect.style.opacity = '1';
+            
+            setTimeout(() => {
+                effect.style.opacity = '0';
+            }, 500);
+        }
+
+        // إضافة تأثيرات تحريك إضافية للأيقونات
+        document.querySelectorAll('.icon').forEach(icon => {
+            icon.addEventListener('mousemove', (e) => {
+                const x = e.offsetX;
+                const y = e.offsetY;
+                const rotateY = (x / icon.offsetWidth - 0.5) * 20;
+                const rotateX = (0.5 - y / icon.offsetHeight) * 20;
+                
+                icon.querySelector('.icon-content').style.transform = 
+                    rotateY(${rotateY}deg) rotateX(${rotateX}deg);
+            });
+            
+            icon.addEventListener('mouseleave', () => {
+                icon.querySelector('.icon-content').style.transform = 
+                    'rotateY(0) rotateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
